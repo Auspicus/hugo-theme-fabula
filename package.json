@@ -1,0 +1,25 @@
+{
+  "name": "hugo-theme-bones",
+  "version": "1.0.0",
+  "description": "Skeleton of a Hugo theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "theme": "dart-sass sass/styles.scss static/css/styles.css; uglifycss static/css/styles.css > static/css/styles.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Auspicus/hugo-theme-bones.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Auspicus/hugo-theme-bones/issues"
+  },
+  "homepage": "https://github.com/Auspicus/hugo-theme-bones#readme",
+  "dependencies": {
+    "dart-sass": "^1.10.3",
+    "hugo-bin": "^0.29.0",
+    "uglifycss": "0.0.29"
+  }
+}

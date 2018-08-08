@@ -1,0 +1,12 @@
+name = "Bones"
+license = "MIT License"
+licenselink = "https://github.com/auspicus/hugo-theme-bones/blob/master/LICENSE"
+description = "Skeleton of a Hugo theme."
+homepage = "https://github.com/auspicus/hugo-theme-bones"
+tags = ["barebones", "minimal", "minimalist"]
+features = ["homepage", "pages"]
+min_version = "0.30"
+
+[author]
+  name = "David Disch"
+  homepage = "https://auspicus.io"

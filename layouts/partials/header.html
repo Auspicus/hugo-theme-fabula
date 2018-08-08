@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>
+  {{ if .IsHome }}
+    {{ .Site.Title }}
+  {{ else }}
+    {{ .Title }}
+  {{ end }}
+  </title>
+
+  <link rel="stylesheet" href="{{ "css/styles.min.css"|relURL }}">
+
+  <!-- Custom CSS -->
+  {{ range .Site.Params.customCSS -}}
+  <link rel="stylesheet" href="{{ . | relURL }}">
+  {{- end }}
+
+  <!-- RSS -->
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <!-- Google Analytics -->
+  {{ template "_internal/google_analytics_async.html" . }}
+</head>
