@@ -1,0 +1,39 @@
+.nav {
+  text-align: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.nav__site-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 auto 1rem;
+  letter-spacing: .15rem;
+
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+.nav__topic {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem;
+  margin: 0 .5rem;
+  text-decoration: inherit;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: .15rem;
+
+  &:hover {
+    color: #313131;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+}

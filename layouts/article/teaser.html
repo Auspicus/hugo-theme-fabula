@@ -1,0 +1,20 @@
+<a class="article-teaser__wrapper" href="{{ .Permalink }}">
+  <div class="article-teaser">
+    <div class="article-teaser__image-wrapper">
+      <img class="article-teaser__image" src="https://picsum.photos/400/200" alt="">
+    </div>
+    <div class="article-teaser__content">
+      <h3 class="article-teaser__title">{{ .Title }}</h3>
+      <div class="article-teaser__meta">
+        {{ range $key, $val := .Params.categories }}
+          {{ if gt $key 0 }}&middot;{{ end }}
+          {{ if lt $key 3 }}
+          <span class="article-teaser__category">{{ humanize $val }}</span>
+          {{ end }}
+        {{ end }}
+        &raquo;
+        <span class="article-teaser__reading-time">{{ .ReadingTime }} min read</span>
+      </div>
+    </div>
+  </div>
+</a>

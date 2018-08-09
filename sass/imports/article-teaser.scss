@@ -1,0 +1,50 @@
+.article-teaser__wrapper {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.article-teaser {
+  color: #313131;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.article-teaser__image-wrapper {
+  position: relative;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+.article-teaser__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transition:
+    width .5s ease;
+
+  .article-teaser__wrapper:hover & {
+    width: 105%;
+  }
+}
+
+.article-teaser__content {
+  padding: 1rem;
+}
+
+.article-teaser__title {
+  margin-top: 0;
+}
+
+.article-teaser__meta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .65rem;
+  text-transform: uppercase;
+  vertical-align: text-top;
+}
+
+.article-teaser__category {
+  text-decoration: inherit;
+  color: inherit;
+}

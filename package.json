@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "Skeleton of a Hugo theme.",
   "main": "index.js",
+  "watch": {
+    "theme": {
+      "patterns": ["sass"],
+      "extensions": "scss"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-theme": "npm run theme; npm-watch theme",
     "theme": "dart-sass sass/styles.scss static/css/styles.css; uglifycss static/css/styles.css > static/css/styles.min.css"
   },
   "repository": {
@@ -20,6 +27,7 @@
   "dependencies": {
     "dart-sass": "^1.10.3",
     "hugo-bin": "^0.29.0",
+    "npm-watch": "^0.3.0",
     "uglifycss": "0.0.29"
   }
 }

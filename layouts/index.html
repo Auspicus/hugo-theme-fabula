@@ -1,10 +1,19 @@
 {{ partial "header.html" . }}
-<body>
-  <main>
-    <h1>{{ .Title }}</h1>
-    <section>
-      {{ .Content }}
-    </section>
-  </main>
-</body>
+<header class="header">
+  {{ partial "nav.html" . }}
+</header>
+<main class="main">
+  <section class="section--960 section--2-col">
+    <h2 class="invisible">Articles</h2>
+    {{ range (where .Site.Pages "Section" "article") }}
+      {{ if eq .Kind "page" }}  
+        <div class="section__column">
+          {{ .Render "teaser" }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </section>
+</main>
+<footer class="footer">
+</footer>
 {{ partial "footer.html" . }}

@@ -1,10 +1,47 @@
-{{ partial "header.html" . }}
-<body>
-  <main>
-    <h1>{{ .Title }}</h1>
-    <section>
+{{ define "header" }}
+{{ end }}
+{{ define "main" }}
+  {{ $author := index (where ($.Site.RegularPages.RelatedIndices . "author") "Type" "author" | first 1) 0 }}
+  <section class="section--960">
+    <img class="article__featured-image" width="960" height="480" src="{{ default "https://picsum.photos/960/480" .Params.featured_image }}" alt="">
+  </section>
+  <section class="section--560">
+    <h2 class="article__title">{{ .Title }}</h2>
+    <div class="article__meta">
+      <div class="article__meta-image">
+        <img 
+          class="article__author-avatar"
+          src="{{ $author.Params.avatar }}"
+          alt="">
+      </div>
+      <div class="article__meta-detail">
+        <div class="article__author-name"><a href="{{ $author.URL|relLangURL }}">by {{ $author.Title }}</a></div>
+        <div class="article__details">
+          <span class="article__published-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          &middot; <span class="article__reading-time">{{ .ReadingTime }} min read</span>
+        </div>
+      </div>
+    </div>
+    <div class="article__content content">
       {{ .Content }}
-    </section>
-  </main>
-</body>
-{{ partial "footer.html" . }}
+    </div>
+    <div class="article__categories">
+      {{ range $key, $val := .Params.categories }}
+        {{ if gt $key 0 }}&middot;{{ end }}
+        <a 
+          class="article__topic" 
+          href="{{ (replace "/categories/term" "term" $val)|relLangURL }}"
+          aria-label="Read more articles about {{ humanize $val }}">{{ humanize $val }}</a>
+      {{ end }}
+    </div>
+    {{ if eq (default false $.Site.Params.enableFacebookComments) true }}
+    {{ if isset $.Site.Params "facebookappid" }}
+    <div class="article__comments">
+      <div class="fb-comments" data-href="{{ .Permalink }}" data-width="100%" data-numposts="5"></div>
+    </div>
+    {{ end }}
+    {{ end }}
+  </section>
+{{ end }}
+{{ define "footer" }}
+{{ end }}

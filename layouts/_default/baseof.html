@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+<header class="header">
+  {{ partial "nav.html" . }}
+  {{ block "header" . }}
+  <div></div>
+  {{ end }}
+</header>
+<main class="main">
+  {{ block "main" . }}
+  <div></div>
+  {{ end }}
+</main>
+<footer class="footer">
+  {{ block "footer" . }}
+  {{ end }}
+</footer>
+{{ partial "footer.html" . }}

@@ -1,2 +1,16 @@
 /* Add sass imports here */
 @import 'imports/normalize.scss';
+@import 'imports/typography.scss';
+@import 'imports/header.scss';
+@import 'imports/nav.scss';
+@import 'imports/section.scss';
+@import 'imports/article-teaser.scss';
+@import 'imports/article.scss';
+@import 'imports/content.scss';
+@import 'imports/footer.scss';
+
+/* Suedoh! classes */
+.invisible {
+  position: absolute;
+  visibility: hidden;
+}

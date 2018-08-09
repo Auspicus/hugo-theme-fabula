@@ -1,10 +1,18 @@
-{{ partial "header.html" . }}
-<body>
-  <main>
-    <h1>{{ .Title }}</h1>
-    <section>
-      {{ .Content }}
-    </section>
-  </main>
-</body>
-{{ partial "footer.html" . }}
+{{ define "header" }}
+{{ end }}
+{{ define "main" }}
+  <section class="section--960">
+    <h2 class="section__title">{{ .Title }}</h2>
+  </section>
+  <section class="section--960 section--2-col">
+    {{ range .Pages }}
+      {{ if eq .Kind "page" }}  
+        <div class="section__column">
+          {{ .Render "teaser" }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </section>
+{{ end }}
+{{ define "footer" }}
+{{ end }}

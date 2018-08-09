@@ -1,0 +1,10 @@
+.content {
+  color: #3c3c3c;
+  font-size: .9rem;
+  line-height: 1.7rem;
+
+  @media (min-width: 560px) {
+    font-size: 1rem;
+    line-height: 1.85rem;
+  }
+}

@@ -1,13 +1,13 @@
 baseURL                     = "https://example.org/"        # Your domain name. Must end with "/"
 languageCode                = "en-us"
-title                       = "Bones"                       # Site title
-theme                       = "bones"
+title                       = "Fabula"                      # Site title
+theme                       = "fabula"
 pygmentsStyle               = "monokai"                     # https://help.farbox.com/pygments.html
 pygmentsCodefences          = true
 
 
 [params]
-description = "Skeleton of a Hugo theme."
+description = "Clean-shaven Hugo theme for journalism."
 
 [[params.social]]
 url  = "https://twitter.com/"
@@ -18,8 +18,10 @@ url  = "https://facebook.com/"
 icon = "facebook"
 
 
-[[menu.global]]
-name = "News"
+[menu]
+
+[[menu.main]]
+name = "Categories"
 weight = 1
-identifier = "news"
-url = "/news/"
+identifier = "categories"
+url = "/categories/"

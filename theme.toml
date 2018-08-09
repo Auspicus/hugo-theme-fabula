@@ -1,10 +1,10 @@
-name = "Bones"
+name = "Fabula"
 license = "MIT License"
-licenselink = "https://github.com/auspicus/hugo-theme-bones/blob/master/LICENSE"
-description = "Skeleton of a Hugo theme."
-homepage = "https://github.com/auspicus/hugo-theme-bones"
-tags = ["barebones", "minimal", "minimalist"]
-features = ["homepage", "pages"]
+licenselink = "https://github.com/auspicus/hugo-theme-fabula/blob/master/LICENSE"
+description = "Clean-shaven Hugo theme for journalism."
+homepage = "https://github.com/auspicus/hugo-theme-fabula"
+tags = ["journalism", "minimal", "minimalist"]
+features = ["articles", "authors", "posts", "blogs"]
 min_version = "0.30"
 
 [author]

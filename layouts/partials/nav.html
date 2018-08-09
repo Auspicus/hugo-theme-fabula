@@ -1,0 +1,15 @@
+<nav class="nav">
+  <h1 class="nav__site-title"><a href="{{ "/"|relLangURL }}">{{ .Site.Title }}</a></h1>
+  <div class="nav__topics">
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies -}}
+      {{ if eq $taxonomyname "categories" }}
+        {{ range $key, $value := $taxonomy }}
+          <a 
+            class="nav__topic" 
+            href="{{ (replace "/categories/term" "term" $key)|relLangURL }}"
+            aria-label="Read more articles about {{ humanize $key }}">{{ humanize $key }}</a>
+        {{ end }}
+      {{ end }}
+    {{- end }}
+  </div>
+</nav>

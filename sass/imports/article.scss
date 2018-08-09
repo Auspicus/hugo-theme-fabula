@@ -1,0 +1,76 @@
+.article__featured-image {
+  width: 100%;
+  height: auto;
+}
+
+.article__title {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+
+  @media (min-width: 960px) {
+    font-size: 2rem;
+  }
+}
+
+.article__meta {
+  color: #666;
+  position: relative;
+  font-size: .8rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.article__meta-image {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+}
+
+.article__meta-detail {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+}
+
+.article__author-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: .5rem;
+}
+
+.article__author-name {
+  line-height: 25px;
+
+  & > a {
+    color: inherit;
+  }
+}
+
+.article__details {
+  line-height: 25px;
+}
+
+.article__content {
+  margin: 3rem 0 2rem;
+}
+
+.article__topic {
+  color: inherit;
+}
+
+.article__comments {
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 3rem 0 0;
+  box-shadow: 
+    0 15px 35px rgba(50, 50, 93, .1),
+    0 5px 15px rgba(0, 0, 0, .07);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.fb-comments.fb_iframe_widget_loader {
+  height: 300px;
+}

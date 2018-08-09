@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400");
 html {
   line-height: 1.15;
   /* 1 */
@@ -329,6 +330,261 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", sans-serif;
+}
+
+.header {
+  padding: 1rem 1rem 2rem;
+}
+
+.nav {
+  text-align: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.nav__site-title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 auto 1rem;
+  letter-spacing: 0.15rem;
+}
+.nav__site-title a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.nav__site-title a:focus {
+  text-decoration: underline;
+}
+
+.nav__topic {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+  text-decoration: inherit;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: 0.15rem;
+}
+.nav__topic:hover {
+  color: #313131;
+}
+.nav__topic:focus {
+  text-decoration: underline;
+}
+
+.section,
+.section--2-col,
+.section--960,
+.section--560 {
+  margin: 0 1rem;
+}
+@media (min-width: 360px) {
+  .section,
+.section--2-col,
+.section--960,
+.section--560 {
+    margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 620px) {
+  .section--560 {
+    margin: 0 auto;
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .section--960 {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+.section--2-col {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.section--2-col .section__column {
+  max-width: 460px;
+  flex: 0 1 100%;
+}
+@media (min-width: 760px) {
+  .section--2-col .section__column {
+    max-width: none;
+    flex: 0 1 45%;
+  }
+}
+
+.section__title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.article-teaser__wrapper {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.article-teaser {
+  color: #313131;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.article-teaser__image-wrapper {
+  position: relative;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+
+.article-teaser__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transition: width 0.5s ease;
+}
+.article-teaser__wrapper:hover .article-teaser__image {
+  width: 105%;
+}
+
+.article-teaser__content {
+  padding: 1rem;
+}
+
+.article-teaser__title {
+  margin-top: 0;
+}
+
+.article-teaser__meta {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  vertical-align: text-top;
+}
+
+.article-teaser__category {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.article__featured-image {
+  width: 100%;
+  height: auto;
+}
+
+.article__title {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+@media (min-width: 960px) {
+  .article__title {
+    font-size: 2rem;
+  }
+}
+
+.article__meta {
+  color: #666;
+  position: relative;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.article__meta-image {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+}
+
+.article__meta-detail {
+  display: inline-block;
+  height: 50px;
+  vertical-align: top;
+}
+
+.article__author-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
+
+.article__author-name {
+  line-height: 25px;
+}
+.article__author-name > a {
+  color: inherit;
+}
+
+.article__details {
+  line-height: 25px;
+}
+
+.article__content {
+  margin: 3rem 0 2rem;
+}
+
+.article__topic {
+  color: inherit;
+}
+
+.article__comments {
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 3rem 0 0;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.fb-comments.fb_iframe_widget_loader {
+  height: 300px;
+}
+
+.content {
+  color: #3c3c3c;
+  font-size: 0.9rem;
+  line-height: 1.7rem;
+}
+@media (min-width: 560px) {
+  .content {
+    font-size: 1rem;
+    line-height: 1.85rem;
+  }
+}
+
+.footer {
+  background: #313131;
+  color: #fff;
+  border-top: 10px solid #555;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* Suedoh! classes */
+.invisible {
+  position: absolute;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */
